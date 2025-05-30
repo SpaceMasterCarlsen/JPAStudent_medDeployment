@@ -18,6 +18,11 @@ public class StudentRestController {
     @Autowired
     StudentRepository studentRepository;
 
+    @GetMapping("/")
+    public String detHerErRoden(){
+        return "Du er i roden af JPAStudent";
+    }
+
     @GetMapping("/students")
     public List<Student> getStudents(){
         var obj = studentRepository.findAll();
